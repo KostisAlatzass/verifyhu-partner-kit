@@ -26,6 +26,13 @@ Step 5 works in one of two ways. Pick one:
 - **Webhook**: verify.hu sends a signed POST to a web address you give us. Rewards arrive at once.
 - **Polling**: your bot asks once a minute who finished. No public address needed.
 
+## Requirements
+
+- Node 18 or newer (the client uses the built-in `fetch`), or Python 3.10+ for the discord.py example.
+- A partner key from verify.hu.
+
+There is nothing to install: copy `verifyhu.js` into your bot, or clone this repository next to it.
+
 ## Quick start
 
 ```js
