@@ -5,6 +5,14 @@ Your bot asks verify.hu for a link, the player answers in a small window, and ve
 
 This repository is everything that runs inside your bot. It is about 100 lines and has no dependencies.
 
+## Demo
+
+[![A player answering two questions in the verify.hu window](media/demo.gif)](media/demo.mp4)
+
+Click the preview for the full video with sound.
+
+This is a demo, not a live bot: the questions are samples, the taps are played by the recorder, and "Martine" stands in for your bot's name and picture. The window's colours, background, fonts and layout are set per bot, so yours will look like your bot, not like this one.
+
 ## What your bot sends, and what it does not
 
 | Sent to verify.hu | Never sent |
