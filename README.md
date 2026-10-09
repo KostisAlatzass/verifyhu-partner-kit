@@ -45,6 +45,12 @@ if (round.ok) {
 }
 ```
 
+To run an example, copy `.env.example` to `.env`, fill it in, and start it (Node 20.6 or newer reads the file for you):
+
+```bash
+node --env-file=.env examples/discordjs-webhook.js
+```
+
 Complete bots to copy from:
 
 | File | For |
