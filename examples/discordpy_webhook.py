@@ -1,9 +1,4 @@
-"""A discord.py bot with an /earn command. verify.hu calls your web address when a player finishes.
-
-    VERIFYHU_KEY=...  DISCORD_TOKEN=...  python examples/discordpy_webhook.py
-
-Needs discord.py 2.x (which brings aiohttp).
-"""
+"""/earn with a webhook, for discord.py 2.x."""
 
 import hashlib
 import hmac

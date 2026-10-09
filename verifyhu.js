@@ -1,16 +1,5 @@
 'use strict';
 
-/**
- * verify.hu partner client.
- *
- * Three calls cover the whole integration:
- *   startRound(userId)   ask for a one-time link when a player runs your command
- *   verifyWebhook(...)   check that a "finished" message really came from verify.hu
- *   fetchFinished(since) ask who finished, for bots without a public web address
- *
- * Needs Node 18 or newer. No dependencies.
- */
-
 const crypto = require('node:crypto');
 
 const DEFAULT_BASE_URL = 'https://verify.hu';

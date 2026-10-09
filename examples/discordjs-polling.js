@@ -1,9 +1,6 @@
 'use strict';
 
-// The same /earn command for a bot without a public web address: once a minute the bot asks
-// verify.hu who finished. Players get their reward up to a minute later than with a webhook.
-//
-//   VERIFYHU_KEY=...  DISCORD_TOKEN=...  node examples/discordjs-polling.js
+// /earn without a webhook: polls for finished rounds once a minute.
 
 const fs = require('node:fs');
 const { Client, GatewayIntentBits, MessageFlags, ButtonStyle, ComponentType } = require('discord.js');

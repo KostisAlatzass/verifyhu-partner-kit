@@ -1,9 +1,6 @@
 'use strict';
 
-// A discord.js v14 bot with an /earn command. verify.hu calls your web address when a player finishes.
-// Use this if your bot has a public https address. If it does not, see discordjs-polling.js.
-//
-//   VERIFYHU_KEY=...  DISCORD_TOKEN=...  node examples/discordjs-webhook.js
+// /earn with a webhook. Needs a public https address; otherwise use discordjs-polling.js.
 
 const http = require('node:http');
 const { Client, GatewayIntentBits, MessageFlags, ButtonStyle, ComponentType } = require('discord.js');
