@@ -122,6 +122,22 @@ The signature is HMAC-SHA256 of `<timestamp>.<body>` with your key, in hex, if y
 
 Answer with any 2xx status within five seconds. If you do not, the message is sent again later, up to eight times, with a longer pause each time.
 
+### Testing your webhook
+
+Once your address is saved on verify.hu, we can send it a test message at any time. It is signed like a real one and looks like this:
+
+```json
+{ "event": "earn.test", "partner": "your-bot" }
+```
+
+`verifyWebhook` accepts it, so your handler runs end to end. Answer 2xx and give no reward: only `earn.finished` is a finished round.
+
+To try the signature check without us, run the tests in this repository:
+
+```bash
+npm test
+```
+
 ### `fetchFinished(since)`
 
 Returns `{ rounds, next }`: up to 100 finished rounds after `since`, oldest first. Save `next` and pass it as `since` on the next call.
