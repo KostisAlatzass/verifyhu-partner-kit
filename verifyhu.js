@@ -5,6 +5,7 @@ const crypto = require('node:crypto');
 const DEFAULT_BASE_URL = 'https://verify.hu';
 const REQUEST_TIMEOUT_MS = 8000;
 const MAX_WEBHOOK_AGE_SECONDS = 300;
+const DISCORD_ID = /^\d{17,20}$/;
 
 class VerifyHuError extends Error {
   constructor(message, status) {
@@ -39,7 +40,9 @@ class VerifyHu {
    * @param {string} userId The player's Discord user ID. Nothing else about the player is sent.
    */
   async startRound(userId) {
-    return this.#request('POST', '/api/partner/start', { user_id: String(userId) });
+    const id = String(userId);
+    if (!DISCORD_ID.test(id)) throw new TypeError(`VerifyHu: "${id}" is not a Discord user ID`);
+    return this.#request('POST', '/api/partner/start', { user_id: id });
   }
 
   /**
