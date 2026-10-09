@@ -153,6 +153,26 @@ Network problems and refused requests throw `VerifyHuError` with a `status`:
 | `401` | The key is wrong. |
 | `429` | Too many requests with a wrong key. Wait ten minutes. |
 
+## Questions bot owners ask
+
+**How many questions is a round, and how often can a player play?**
+You choose both, and we set them on our side: 1 to 20 questions per round, 1 to 10 rounds per player per day. The day turns over at midnight UTC.
+
+**How long does a link work?**
+30 minutes to open it, then 20 minutes to finish. If the player runs your command again before opening it, they get the same link.
+
+**Does the window open inside Discord?**
+`url` opens it in the browser and always works. `activity_url` opens it inside Discord under your bot's name; that needs Activities switched on for your application, which we set up together.
+
+**What if my bot is offline when a player finishes?**
+With a webhook, the message is sent again later. With polling, the round is still there the next time you ask, as long as you saved `next`.
+
+**Can a player farm it?**
+Skipped and rushed answers do not count, the daily cap is per player, and careless rounds come back with `quality: "low"`. What a round is worth is up to you.
+
+**Can I turn it off?**
+Yes, at any time. `startRound` then answers `{ ok: false, reason: 'off' }` and open links stop working.
+
 ## Licence
 
 MIT. See [LICENSE](LICENSE).
