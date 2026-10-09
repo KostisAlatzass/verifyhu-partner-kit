@@ -8,6 +8,9 @@
   "engines": {
     "node": ">=18"
   },
+  "scripts": {
+    "test": "node --test"
+  },
   "files": [
     "verifyhu.js",
     "verifyhu.d.ts",
