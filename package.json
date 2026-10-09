@@ -1,0 +1,11 @@
+{
+  "name": "verifyhu-partner-kit",
+  "version": "1.0.0",
+  "description": "Let your Discord bot's players earn rewards by answering quick questions on verify.hu.",
+  "main": "verifyhu.js",
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "files": ["verifyhu.js", "examples", "README.md", "LICENSE"],
+  "peerDependencies": { "discord.js": "^14.16.0" },
+  "peerDependenciesMeta": { "discord.js": { "optional": true } }
+}

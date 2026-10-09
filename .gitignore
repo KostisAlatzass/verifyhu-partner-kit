@@ -1,0 +1,4 @@
+.env
+node_modules/
+verifyhu-cursor.txt
+__pycache__/
